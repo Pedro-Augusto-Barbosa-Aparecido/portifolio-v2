@@ -1,6 +1,19 @@
 {
   "extends": [
-    "next/core-web-vitals", 
-    "@rocketseat/eslint-config/react"
-  ]
+    "next/core-web-vitals",
+    "@rocketseat/eslint-config/react",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "camelcase": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  }
 }
