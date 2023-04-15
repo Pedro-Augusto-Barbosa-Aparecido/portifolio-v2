@@ -1,47 +1,28 @@
 import { Files, Linkedin, Github } from "lucide-react";
+import { MenuIconButton } from "./MenuIconButton";
 
-import colors from "tailwindcss/colors";
-import { Icon } from "./Icon";
 import Link from "next/link";
-
-export const SIDEBAR_ICON_SIZE = 24;
 
 export function Sidebar() {
   return (
-    <div className="h-full w-16 rounded-bl-md flex flex-col items-center justify-between py-4 gap-4 shadow-zinc-700 shadow-xl">
-      <div className="flex flex-col gap-3 items-center justify-start">
-        <Icon
-          icon={<Files size={SIDEBAR_ICON_SIZE} color={colors.gray[400]} />}
-        />
+    <div className="h-full w-16 rounded-bl-md flex flex-col items-center justify-between gap-4">
+      <div className="flex h-full flex-col items-center justify-start w-full">
+        <MenuIconButton icon={Files} isActive />
       </div>
-      <div className="flex flex-col gap-3 items-center justify-end">
+      <div className="flex h-full flex-col items-center w-full justify-end">
         <Link
           href="https://www.linkedin.com/in/pedro-augusto-barbosa-aparecido-195247217/"
+          className="w-full"
           target="_blank"
         >
-          <Icon
-            icon={
-              <Linkedin
-                size={SIDEBAR_ICON_SIZE}
-                color={colors.gray[400]}
-                fill={colors.gray[400]}
-              />
-            }
-          />
+          <MenuIconButton icon={Linkedin} />
         </Link>
         <Link
           href="https://github.com/Pedro-Augusto-Barbosa-Aparecido"
+          className="w-full"
           target="_blank"
         >
-          <Icon
-            icon={
-              <Github
-                size={SIDEBAR_ICON_SIZE}
-                color={colors.gray[400]}
-                fill={colors.gray[400]}
-              />
-            }
-          />
+          <MenuIconButton icon={Github} />
         </Link>
       </div>
     </div>
