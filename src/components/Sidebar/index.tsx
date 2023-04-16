@@ -1,4 +1,8 @@
-import { Files, Linkedin, Github } from "lucide-react";
+"use client";
+
+import { Certificate } from "@phosphor-icons/react";
+import { Linkedin, Github } from "lucide-react";
+
 import { MenuIconButton } from "./MenuIconButton";
 
 import Link from "next/link";
@@ -7,7 +11,9 @@ export function Sidebar() {
   return (
     <div className="h-full w-16 rounded-bl-md flex flex-col items-center justify-between gap-4">
       <div className="flex h-full flex-col items-center justify-start w-full">
-        <MenuIconButton icon={Files} isActive />
+        <Link href="/certificate" className="w-full">
+          <MenuIconButton icon={Certificate} isActive />
+        </Link>
       </div>
       <div className="flex h-full flex-col items-center w-full justify-end">
         <Link

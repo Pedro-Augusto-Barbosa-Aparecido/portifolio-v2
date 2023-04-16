@@ -1,11 +1,12 @@
-import type { Icon } from "lucide-react";
+import type { Icon as LucideIcons } from "lucide-react";
+import type { Icon as PhosphorIcons } from "@phosphor-icons/react";
 
 import colors from "tailwindcss/colors";
 
 export const SIDEBAR_ICON_SIZE = 24;
 
 interface IconProps {
-  icon: Icon;
+  icon: LucideIcons | PhosphorIcons;
   isActive?: boolean;
 }
 
