@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-import CryingLineIconSVG from "@/assets/crying-line-icon.svg";
+import EmptyExplorerImage from "@/assets/empty-explorer-image.webp";
 
-const IMAGE_SIZE = 140;
+const IMAGE_SIZE = 256;
 
 export const metadata = {
   title: "Certificates",
@@ -10,12 +10,13 @@ export const metadata = {
 
 export default function Certificate() {
   return (
-    <div className="w-full h-full gap-4 flex flex-col items-center justify-center">
+    <div className="w-full h-full flex flex-col items-center justify-center">
       <Image
-        src={CryingLineIconSVG}
+        src={EmptyExplorerImage}
         alt=""
         width={IMAGE_SIZE}
         height={IMAGE_SIZE}
+        priority
       />
       <span className="text-sm text-slate-600 font-bold">
         No certificate selected!

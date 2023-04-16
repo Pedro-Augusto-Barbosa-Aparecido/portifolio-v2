@@ -12,6 +12,8 @@ export function EmptyExplorer() {
         alt=""
         width={IMAGE_SIZE}
         height={IMAGE_SIZE}
+        quality={90}
+        priority
       />
       <span className="text-slate-600 text-sm font-semibold overflow-hidden w-36">
         No content to show :(
