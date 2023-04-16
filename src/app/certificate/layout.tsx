@@ -9,7 +9,7 @@ export default async function CertificateLayout({
   children,
 }: CertificateLayoutProps) {
   return (
-    <div className="flex justify-start items-start h-full">
+    <div className="flex justify-start items-start h-full w-full">
       <FileExplorer />
       {children}
     </div>

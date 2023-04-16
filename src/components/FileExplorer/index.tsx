@@ -6,6 +6,7 @@ import * as Collapsible from "@radix-ui/react-collapsible";
 
 import { CollapsibleButton } from "./CollapsibleButton";
 import clsx from "clsx";
+import { EmptyExplorer } from "./EmptyExplorer";
 
 export function FileExplorer() {
   const [folderExplorerIsOpened, setFolderExplorerIsOpened] =
@@ -21,7 +22,9 @@ export function FileExplorer() {
       onOpenChange={setFolderExplorerIsOpened}
     >
       <CollapsibleButton isOpenedCollapse={folderExplorerIsOpened} />
-      <Collapsible.Content className="w-full h-full"></Collapsible.Content>
+      <Collapsible.Content className="w-full h-full py-4 px-6 overflow-x-hidden overflow-y-auto scrollbar-thumb-slate-700 scrollbar-thin scrollbar-thumb-rounded-full">
+        <EmptyExplorer />
+      </Collapsible.Content>
     </Collapsible.Root>
   );
 }
