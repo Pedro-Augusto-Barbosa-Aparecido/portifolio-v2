@@ -8,7 +8,7 @@ export const metadata = {
   title: "Certificates",
 };
 
-export default function Certificate() {
+export default async function CertificateEmptyPage() {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">
       <Image

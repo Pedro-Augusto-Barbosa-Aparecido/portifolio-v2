@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import VSCodeSvg from "@/assets/vscode.svg";
+import Link from "next/link";
 
 export const ICON_SIZE = 18;
 
@@ -15,14 +16,14 @@ export function Header() {
       <span className="text-xs text-gray-500">
         Portifólio - Pedro Augusto B. Aparecido
       </span>
-      <div className="">
+      <Link href="/" className="">
         <Image
           src={VSCodeSvg}
           alt="Visual Studio Code Icon"
           height={ICON_SIZE}
           width={ICON_SIZE}
         />
-      </div>
+      </Link>
     </header>
   );
 }
