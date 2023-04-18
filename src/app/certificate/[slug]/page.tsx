@@ -25,7 +25,7 @@ export default async function Certificate({ params }: CertificateProps) {
   });
 
   const certificate = data.certificates.find(
-    (certificate) => certificate.id === params.slug
+    (certificate: any) => certificate.id === params.slug
   );
 
   return (
