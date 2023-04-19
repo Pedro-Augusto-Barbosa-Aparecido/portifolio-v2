@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import EmptyExplorerImage from "@/assets/empty-explorer-image.webp";
+import EmptyExplorerImage from "@/assets/empty-explorer.png";
 
 const IMAGE_SIZE = 256;
 
