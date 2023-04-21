@@ -1,6 +1,8 @@
+import type { NotionCertificateDocument } from "@/@types/notion-certificates";
+
 import { ContentView } from "@/components/ContentView";
-import { getClient } from "@/lib/apollo";
-import { gql } from "@apollo/client";
+
+import { notion } from "@/lib/notion";
 
 interface CertificateProps {
   params: {
@@ -8,29 +10,17 @@ interface CertificateProps {
   };
 }
 
-const getCertificateFromHygraph = gql`
-  query Certificates {
-    certificates {
-      certificateDescription
-      certificateLink
-      id
-    }
-  }
-`;
-
 export default async function Certificate({ params }: CertificateProps) {
-  const client = getClient();
-  const { data } = await client.query({
-    query: getCertificateFromHygraph,
+  const certificate = await notion.pages.retrieve({
+    page_id: params.slug,
   });
 
-  const certificate = data.certificates.find(
-    (certificate: any) => certificate.id === params.slug
-  );
+  /* @ts-ignore // Page retireve option has key 'properties' */
+  const { properties }: { properties: NotionCertificateDocument } = certificate;
 
   return (
     <div className="relative h-full w-full">
-      <ContentView markdown={certificate.certificateDescription} />
+      <ContentView markdown={properties.Description.rich_text[0].plain_text} />
     </div>
   );
 }
