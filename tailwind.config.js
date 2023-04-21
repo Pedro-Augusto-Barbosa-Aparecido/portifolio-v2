@@ -10,6 +10,9 @@ module.exports = {
       height: {
         "content-height": "calc(100% - 1.5rem - 0.5rem)", // 100% of container - 1.5rem of header height - 1rem of header padding in the axis y
       },
+      width: {
+        "content-md": "96rem",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -18,5 +21,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwind-scrollbar")({ nocompatible: true })],
+  plugins: [
+    require("tailwind-scrollbar")({ nocompatible: true }),
+    require("@tailwindcss/typography"),
+  ],
 };

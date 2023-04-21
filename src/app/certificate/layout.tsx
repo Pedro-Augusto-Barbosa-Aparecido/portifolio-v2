@@ -65,7 +65,7 @@ export default async function CertificateLayout({
   }, [] as FilesType[]);
 
   return (
-    <div className="flex justify-start items-start h-full w-full">
+    <div className="flex justify-start items-start h-full w-full scrollbar">
       <FileExplorer
         folders={folders}
         title={"My Certificates"}

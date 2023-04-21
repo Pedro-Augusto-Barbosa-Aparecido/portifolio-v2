@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`${inter.className} w-screen h-screen bg-app flex justify-center items-center`}
       >
-        <div className="w-10/12 h-5/6 bg-zinc-800 shadow-xl rounded-md overflow-y-hidden">
+        <div className="w-10/12 h-5/6 bg-zinc-800 shadow-xl rounded-md overflow-hidden">
           <Header />
           <div className="h-content-height flex justify-start items-start rounded-b-md">
             <aside className="bg-zinc-900 h-full rounded-bl-md flex items-start justify-start">

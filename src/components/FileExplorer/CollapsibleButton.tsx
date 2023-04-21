@@ -11,7 +11,7 @@ export function CollapsibleButton({
   isOpenedCollapse,
 }: CollapsibleButtonProps) {
   return (
-    <Collapsible.Trigger className="bg-zinc-900 w-5 h-5 flex items-center justify-center rounded-full shadow-sm shadow-zinc-400 absolute top-1/2 -right-2">
+    <Collapsible.Trigger className="bg-zinc-900 w-5 h-5 flex items-center justify-center rounded-full shadow-sm shadow-zinc-400 absolute top-1/2 -right-2 z-50">
       {isOpenedCollapse ? (
         <ChevronLeft color={zinc[300]} size={14} />
       ) : (
