@@ -13,7 +13,7 @@ export function ContentView({ markdown: markdownText = "" }: ContentViewProps) {
 
   return (
     <div
-      className="absolute inset-0 left-1/2 -translate-x-1/2 overflow-auto leading-relaxed py-10 scrollbar scrollbar-thumb-gray-800 scrollbar-track-transparent prose prose-h1:text-white prose-p:text-slate-400 prose-ul:text-slate-500 prose-p:m-0"
+      className="absolute inset-0 left-1/2 -translate-x-1/2 overflow-auto leading-relaxed py-10 pb-20 scrollbar scrollbar-thumb-gray-800 scrollbar-track-transparent prose prose-h1:text-white prose-p:text-slate-400 prose-ul:text-slate-500 prose-p:m-0"
       dangerouslySetInnerHTML={{ __html: html }}
     ></div>
   );
