@@ -47,7 +47,10 @@ export default async function Certificate({ params }: CertificateProps) {
         <span className="w-full text-sm text-ellipsis overflow-hidden whitespace-nowrap font-medium">
           {properties.Name.title[0].plain_text}
         </span>
-        <Link href="/certificate" className="flex items-center justify-center">
+        <Link
+          href="/portfolio/certificate"
+          className="flex items-center justify-center"
+        >
           <X size={18} color={white} />
         </Link>
       </div>

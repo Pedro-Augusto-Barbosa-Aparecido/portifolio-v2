@@ -45,7 +45,7 @@ export default async function CertificateLayout({
           {
             fileId: current.certificateId,
             filename: current.name,
-            url: `/certificate/${current.certificateId}`,
+            url: `/portfolio/certificate/${current.certificateId}`,
           },
         ],
       });
@@ -57,7 +57,7 @@ export default async function CertificateLayout({
       previous[indexOfCompany].files.push({
         fileId: current.certificateId,
         filename: current.name,
-        url: `/certificate/${current.certificateId}`,
+        url: `/portfolio/certificate/${current.certificateId}`,
       });
     }
 

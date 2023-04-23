@@ -11,7 +11,7 @@ export function Sidebar() {
   return (
     <div className="h-full w-16 rounded-bl-md flex flex-col items-center justify-between gap-4">
       <div className="flex h-full flex-col items-center justify-start w-full">
-        <Link href="/certificate" className="w-full">
+        <Link href="/portfolio/certificate" className="w-full">
           <MenuIconButton icon={Certificate} isActive />
         </Link>
       </div>
