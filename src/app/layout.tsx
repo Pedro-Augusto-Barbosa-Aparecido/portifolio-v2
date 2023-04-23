@@ -3,9 +3,6 @@ import "@/styles/globals.css";
 import { ReactNode } from "react";
 import { Inter } from "next/font/google";
 
-import { Header } from "@/components/Header";
-import { Sidebar } from "@/components/Sidebar";
-
 const inter = Inter({
   weight: "400",
   subsets: ["latin"],
@@ -25,15 +22,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`${inter.className} w-screen h-screen bg-app flex justify-center items-center`}
       >
-        <div className="w-10/12 h-5/6 bg-zinc-800 shadow-xl rounded-md overflow-hidden">
-          <Header />
-          <div className="h-content-height flex justify-start items-start rounded-b-md">
-            <aside className="bg-zinc-900 h-full rounded-bl-md flex items-start justify-start">
-              <Sidebar />
-            </aside>
-            {children}
-          </div>
-        </div>
+        {children}
       </body>
     </html>
   );

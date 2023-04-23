@@ -16,6 +16,8 @@ interface CertificateProps {
   };
 }
 
+export const revalidate = 60; /* One minute to revalidate cache */
+
 export async function generateMetadata({
   params,
 }: CertificateProps): Promise<Metadata> {
@@ -25,8 +27,6 @@ export async function generateMetadata({
 
   /* @ts-ignore // Page retireve option has key 'properties' */
   const { properties }: { properties: NotionCertificateDocument } = certificate;
-
-  console.log(properties);
 
   return {
     title: properties.Name.title[0].plain_text,
