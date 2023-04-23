@@ -2,6 +2,7 @@ import type { AuthOptions } from "next-auth";
 
 import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
+import GoogleProvider from "next-auth/providers/google";
 
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 
@@ -10,7 +11,15 @@ import { getUserByEmail } from "@/lib/get-user-by-email";
 
 export const authOptions: AuthOptions = {
   adapter: PrismaAdapter(prisma),
+  session: {
+    strategy: "jwt",
+  },
   providers: [
+    GoogleProvider({
+      name: "auth_google",
+      clientId: process.env.GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+    }),
     CredentialsProvider({
       name: "auth_credentials",
       credentials: {
@@ -26,10 +35,11 @@ export const authOptions: AuthOptions = {
 
         if (user && user.password === credentials.password) return user;
 
-        return null;
+        throw new Error("User or password are incorrect!");
       },
     }),
   ],
 };
 
-export default NextAuth(authOptions);
+const handler = NextAuth(authOptions);
+export { handler as GET, handler as POST };
