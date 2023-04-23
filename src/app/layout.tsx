@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 
 import { ReactNode } from "react";
 import { Inter } from "next/font/google";
+import { Session } from "@/components/Session";
 
 const inter = Inter({
   weight: "400",
@@ -22,7 +23,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`${inter.className} w-screen h-screen bg-app flex justify-center items-center`}
       >
-        {children}
+        <Session>{children}</Session>
       </body>
     </html>
   );
