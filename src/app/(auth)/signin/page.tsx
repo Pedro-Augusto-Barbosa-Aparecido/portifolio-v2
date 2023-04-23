@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import LoginSideImage from "@/assets/login-side-image.png";
+import { FormLogin } from "@/components/FormLogin";
 
 export default function SignIn() {
   return (
@@ -20,6 +21,7 @@ export default function SignIn() {
           If you do not have an account, register by contacting me to help me
           manage the site.
         </p>
+        <FormLogin />
       </div>
     </div>
   );

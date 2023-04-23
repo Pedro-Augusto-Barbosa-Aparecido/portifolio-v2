@@ -16,6 +16,19 @@
   }
 }
 
+/* input:-webkit-autofill{
+  -webkit-text-fill-color: transparent !important;
+} */
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: rgb(226 232 240) !important;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
