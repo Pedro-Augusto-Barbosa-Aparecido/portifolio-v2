@@ -3,7 +3,7 @@ import Image from "next/image";
 import LoginSideImage from "@/assets/login-side-image.png";
 
 import { FormLogin } from "@/components/FormLogin";
-import { LoginWithGoogle } from "@/components/FormLogin/loginWithGoogle";
+// import { LoginWithGoogle } from "@/components/FormLogin/loginWithGoogle";
 import { ContactForm } from "@/components/FormLogin/ContactForm";
 
 export default function SignIn() {
@@ -30,12 +30,12 @@ export default function SignIn() {
             or
           </span>
         </div>
-        <LoginWithGoogle />
+        {/* <LoginWithGoogle />
         <div className="w-full h-[1px] border-t-2 border-solid border-gray-600 relative">
           <span className="absolute text-gray-400 text-md font-medium -translate-y-1/2 -top-[3px] bg-zinc-800 text-center w-fit px-2 left-1/2 -translate-x-1/2">
             x
           </span>
-        </div>
+        </div> */}
         <span className="text-5xl text-zinc-200">Contact me</span>
         <ContactForm />
       </div>
