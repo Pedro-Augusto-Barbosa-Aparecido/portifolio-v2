@@ -1,8 +1,13 @@
 import "@/styles/globals.css";
 
 import { ReactNode } from "react";
+
+import Image from "next/image";
 import { Inter } from "next/font/google";
+
 import { Session } from "@/components/Session";
+
+import BgImageGenshin from "@/assets/bg-home.gif";
 
 const inter = Inter({
   weight: "400",
@@ -23,6 +28,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`${inter.className} w-screen h-screen bg-app flex justify-center items-center`}
       >
+        <Image
+          src={BgImageGenshin}
+          fill
+          quality={100}
+          priority
+          alt=""
+          className="absolute -z-10 top-0 left-0"
+        />
         <Session>{children}</Session>
       </body>
     </html>
