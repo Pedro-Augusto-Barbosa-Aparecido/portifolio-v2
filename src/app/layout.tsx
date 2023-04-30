@@ -2,12 +2,11 @@ import "@/styles/globals.css";
 
 import { ReactNode, Suspense } from "react";
 
-import Image from "next/image";
 import { Inter } from "next/font/google";
 
 import { Session } from "@/components/Session";
 
-import BgImageGenshin from "@/assets/bg-home.gif";
+import { BgImage } from "@/components/BgImage";
 
 const inter = Inter({
   weight: "400",
@@ -50,14 +49,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </div>
           }
         >
-          <Image
-            src={BgImageGenshin}
-            fill
-            quality={100}
-            priority
-            alt=""
-            className="absolute -z-10 top-0 left-0"
-          />
+          <BgImage />
         </Suspense>
         <Session>{children}</Session>
       </body>

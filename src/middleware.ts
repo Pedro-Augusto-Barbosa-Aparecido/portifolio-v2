@@ -23,8 +23,6 @@ import { withAuth } from "next-auth/middleware";
 export default withAuth({
   callbacks: {
     authorized: async function ({ token }) {
-      console.log(token);
-
       return !!token;
     },
   },
