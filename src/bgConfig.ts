@@ -1,9 +1,9 @@
-import BgImageAyanokoji from "@/assets/bg-admin.gif";
+import BgImageGenshin from "@/assets/admin-bg.jpg";
 
 export const BACKGROUND_IMAGES = [
   {
     path: "/admin",
-    image: BgImageAyanokoji,
+    image: BgImageGenshin,
   },
 ];
 

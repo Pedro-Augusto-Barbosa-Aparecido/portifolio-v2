@@ -1,4 +1,4 @@
-// import { Navbar } from "@/components/Navbar";
+import { AdminSideBar } from "@/components/Sidebar/AdminSideBar";
 import { ReactNode } from "react";
 
 interface AdminLayoutProps {
@@ -8,7 +8,7 @@ interface AdminLayoutProps {
 export default function AdminLayout({ children }: AdminLayoutProps) {
   return (
     <div className="w-screen h-screen">
-      {/* <Navbar /> */}
+      <AdminSideBar />
       {children}
     </div>
   );
