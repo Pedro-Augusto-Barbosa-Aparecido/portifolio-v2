@@ -2,15 +2,15 @@ import "@/styles/globals.css";
 
 import { ReactNode, Suspense } from "react";
 
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 
 import { Session } from "@/components/Session";
 
 import { BgImage } from "@/components/BgImage";
 
-const inter = Inter({
+const roboto = Roboto({
   weight: "400",
-  subsets: ["latin"],
+  subsets: ["latin-ext"],
 });
 
 export const metadata = {
@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} w-screen h-screen bg-app flex justify-center items-center`}
+        className={`${roboto.className} w-screen h-screen bg-app flex justify-center items-center`}
       >
         <Suspense
           fallback={
