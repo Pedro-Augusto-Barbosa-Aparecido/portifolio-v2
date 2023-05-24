@@ -61,6 +61,7 @@ export default async function Certificate({ params }: CertificateProps) {
         <Link
           className="absolute right-5 top-5 py-3 px-6 flex justify-center items-center gap-4 shadow-md shadow-zinc-500 text-center text-sm text-slate-200 bg-zinc-900 rounded-lg brightness-125 hover:brightness-100 border-2 border-transparent border-solid hover:border-slate-500"
           href={properties.CertificateLink.url}
+          target="_blank"
         >
           View Certificate
           <ArrowRight size={20} color={white} />
